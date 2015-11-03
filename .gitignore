@@ -4,3 +4,6 @@ triangle
 hull
 src
 fortune_voronoi
+analysis/data
+analysis/results/*txt
+analysis/results/ps*/
