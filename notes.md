@@ -36,25 +36,26 @@
 
   ```
   ./analysis/scripts/generate_data.sh 1 6 10 100
+  ./analysis/scripts/generate_data.sh 2 21 2 100
   python3 /analysis/scripts/convert_rbox_to_node.py
   python3 /analysis/scripts/run_qvoronoi.py
   python3 /analysis/scripts/run_triangle.py
+
   ```
 
-    * generate_data.sh takes a start order, a max order, a base, and a number of runs
-    * it generates RUNS numbers of files with problemsize base^order for all orders between (& including) the start order & max order.
+    * A note on generate_data.sh: it takes a start order, a max order, a base, and a number of runs. It generates RUNS numbers of files with problemsize base^order for all orders between (& including) the start order & max order.
 
   * 11.1.15@5:20pm: To do --put all those files in Excel and take a look at 'em. Should also try to get this kind of info for CGAL (?)
 
   * 11.2.15: got everything plotted out in excel. I suppressed Triangle's file output because it was writing .node and .edge files to my results directory (and taking up time):
    * Note: -N and -E flags are not respected if you use -v, so I changed that in my personal version of Triangle. Added a condition to check switches in triangle.c where write_voronoi is called
-
+   
   * 11.3.15: Thesis mtg
     * to do before 11.10.15
-      --[ ] graph float, double, long double tpp
-      --[ ] ch 5 of computer architecture a quantum approach
-      --[ ] Answer: what is the implementation of the beachfront & the queue for Triangle
-      --[ ] write a loop that reads an array of size 1000, vs 10000, 100000 and adds one or something so you're constantly updating the cache ("thrashing the cache") (this should give an example of the cache "curve" jim has been telling you about)
-         * you have to turn off optimizations(?) since the compiler will try to work around this
+      - [ ] graph float, double, long double tpp
+      - [ ] ch 5 of computer architecture a quantum approach
+      - [ ] Answer: what is the implementation of the beachfront & the queue for Triangle
+      - [ ] write a loop that reads an array of size 1000, vs 10000, 100000 and adds one or something so you're constantly updating the cache ("thrashing the cache") (this should give an example of the cache "curve" jim has been telling you about)
+         - [ ] you have to turn off optimizations(?) since the compiler will try to work around this. so figure out how to do that.
 
 

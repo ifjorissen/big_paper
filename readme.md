@@ -1,7 +1,8 @@
 @ifjorissen is writing a big paper
 
 #### Current Directory Structure
-  * big_paper
+  ```
+    big_paper
     |
     |__ big_paper_latex
        |__ whatever's in here
@@ -20,6 +21,8 @@
              |__convert_rbox_to_node.py
              |__run_triangle.py
              |__run_qvoronoi.py
+
+  ```
 
 
   * Dirs & files of note:
@@ -40,8 +43,9 @@
   * `./qhull/bin/qvoronoi Ts s TI <path to datafile >` (note: the dimension in the summary is 1 more than whatever dimension the data file says)
   * (commented out the check_output and produce_output lines)
   * `cd qhull/bin && time ./qvoronoi TI ../analysis/data/ps1000/qhull/ps1000_1.txt`
-  *can comment out qh_produce_output() (and qh_check_output()) in qvoronoi src and then recompile the command with `make` and re-run
+  * Note: can comment out qh_produce_output() (and qh_check_output()) in qvoronoi src and then recompile the command with `make` and re-run
 
 #### Triangle Commands
   * can use Q to silence output
+  * see notes.md for a note on how I've modified Triangle
   * `cd triangle && time ./triangle -v -B -P -N -E ../analysis/data/ps1000/triangle/ps1000_1.node`
