@@ -52,10 +52,24 @@
    
   * 11.3.15: Thesis mtg
     * to do before 11.10.15
-      - [ ] graph float, double, long double tpp
-      - [ ] ch 5 of computer architecture a quantum approach
+      - [x] graph float, double, long double tpp
+      - [x] ch 5 of computer architecture a quantum approach
       - [ ] Answer: what is the implementation of the beachfront & the queue for Triangle
       - [ ] write a loop that reads an array of size 1000, vs 10000, 100000 and adds one or something so you're constantly updating the cache ("thrashing the cache") (this should give an example of the cache "curve" jim has been telling you about)
          - [ ] you have to turn off optimizations(?) since the compiler will try to work around this. so figure out how to do that.
+
+* 11.7.15@10:45am: learn C the hard way
+* 12:04pm: Reading ch 5 of Computer Architecture: a Quantitative approach (4th edition).
+* 1:44pm: Just found a snipped designed to "Thrash the cache". Here are my [computer's specs] (http://browser.primatelabs.com/geekbench3/684085). I added the same snippet for timing to thrash.c as I did to triangle.c
+  * `gcc thrash.c -o thrash` then `./thrash`
+  * change  line 110 (array[i][j] = i*j) to (array[j][i] = i*j;)
+  * `gcc thrash.c -o thrash` then `./thrash`
+  * Notice the time difference
+
+* 11.8.15: Realized that Triangle.c has 3 separate implementations. Running each of those to benchmark.
+* 11.9.15@11:41am: finished cleaning up the new data & graphing it
+
+
+
 
 
